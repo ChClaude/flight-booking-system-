@@ -33,6 +33,10 @@ header {
       text-decoration: none;
       color: white;
     }
+
+    a:hover {
+      background-color: color(primary-light);
+    }
   }
 
   ul {
@@ -56,7 +60,7 @@ header {
   }
 }
 
-.btn {
+.btn-round {
   background: none;
   border: 2px solid white;
   border-radius: 22px;
@@ -69,12 +73,8 @@ header {
   }
 }
 
-.btn:hover {
+.btn-round:hover {
   background-color: lighten(color(primary), 10%);
-}
-
-a:hover {
-  background-color: color(primary-light);
 }
 
 a:focus {
@@ -98,8 +98,9 @@ a:focus {
     }
   }
 
-  div:nth-child(2) {
+  > div:nth-child(2) {
     position: relative;
+    padding-top: 2*$padding;
   }
 }
 
@@ -112,9 +113,128 @@ a:focus {
   width: 100%;
   height: 85%;
   background-color: #333;
-  opacity: 0.6;
+  opacity: 0.5;
   position: absolute;
 }
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+
+  .btn {
+    margin-left: 10px;
+  }
+
+  .btn:first-child {
+    background-color: color(accent);
+    border: 1px solid color(accent);
+  }
+
+  .btn:first-child:after {
+    content: "";
+    border-color: color(accent) transparent;
+    border-style: solid;
+    border-width: 6px 6px 0;
+    position: absolute;
+    top: 158px;
+    display: block;
+    left: 36%;
+    width: 0;
+    margin-left: -6px;
+  }
+}
+
+.btn {
+  border-radius: 4px;
+  font-size: 15px;
+  color: #FFF;
+  width: auto;
+  padding: .75em 25px;
+  background-color: rgba(35, 43, 56, .25);
+  border: 1px solid rgba(255, 255, 255, .5);
+  font-weight: 400;
+  cursor: pointer;
+  outline: 0;
+}
+
+.btn:hover {
+  background-color: rgba(255,255,255,.15);
+  border-color: #fff;
+}
+
+form {
+  background-color: rgba(35,43,56, .6);
+  padding: 15px 20px;
+  width: 78%;
+  margin-left: auto;
+  margin-right: auto;
+
+  > div:nth-child(2) {
+    display: flex;
+    background-color: #E81932;
+    margin-bottom: 12px;
+  }
+
+}
+
+.input-box {
+  width: 39%;
+  margin-right: 5px;
+  background-color: #FFFFFF;
+  padding: 8px;
+  height: 70px;
+  border-radius: 2px;
+  color: #333;
+  display: inherit;
+  align-items: center;
+
+  label, input {
+    transition: all 0.2s;
+  }
+
+  input[type="text"] {
+    font-size: 20px;
+    padding: 3px 1px;
+  }
+
+  label {
+    color: red;
+    transform: translate(20px, 0) scale(1.5);
+  }
+
+}
+
+.booker-menu {
+  height: auto;
+  margin-bottom: 15px;
+  font-size: 14px;
+
+  a {
+    border-bottom: 3px solid transparent;
+    margin-right: 15px;
+    padding-bottom: 3px;
+  }
+
+  a:first-child {
+    border-bottom: 3px solid color(accent);
+  }
+
+  a:last-child {
+    float: right;
+  }
+}
+
+.icon-wrapper {
+  padding: 4px;
+  display: flex;
+  align-items: center;
+
+  i {
+    font-size: 20px;
+  }
+}
+
 
 footer {
   background-color: color(primary);

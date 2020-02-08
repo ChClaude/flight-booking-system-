@@ -22,7 +22,7 @@ const NavBar = () => {
                         <a href="#">Sign up</a>
                     </li>
                     <li>
-                        <button className="btn round">Sign in <i className="fas fa-user"/></button>
+                        <button className="btn-round">Sign in <i className="fas fa-user"/></button>
                     </li>
                 </ul>
             </nav>
